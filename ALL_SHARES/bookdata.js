@@ -49,8 +49,8 @@ function BookData()
         this.sortedSell = this._sortValues(consolidated ? this._aggregate(this.sellSide) : this.sellSide, this._compareSell);
 
         // Ensure only 10 levels in public view
-        this.sortedBuy.length  = (consolidated && this.sortedBuy.length  > 20) ? 20 : this.sortedBuy.length;
-        this.sortedSell.length = (consolidated && this.sortedSell.length > 20) ? 20 : this.sortedSell.length;
+        this.sortedBuy.length  = (consolidated && this.sortedBuy.length  > 5) ? 5 : this.sortedBuy.length;
+        this.sortedSell.length = (consolidated && this.sortedSell.length > 5) ? 5 : this.sortedSell.length;
 
         // Recalculate VBBO
         this._calculateVBBO(this.buySide, this.sortedBuy);
